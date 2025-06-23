@@ -3,8 +3,8 @@
 #   Title: MLL Rarefaction              # 
 #   Author: Charli D. Minsavage-Davis   #
 #   Date last edited: 23 June 2025      #
-#   Manuscript: S. patens               # 
-#   landscape genetics                  #
+#   Manuscript: S. patens landscape     # 
+#   genetics - Long Island & NYC        #
 #                                       #
 #########################################
 
