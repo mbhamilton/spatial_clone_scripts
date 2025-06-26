@@ -1,0 +1,5 @@
+"1.Long_Island_NY_2018-2019_site_data.csv" contains all site locations and notes describinbg their relavent ecology and sampling difficulties.
+
+"2.Long_Island_NY_2018-2019_patch_data.csv" contains all patch descriptions for each of 5 patches found within each of the 10 sampling populations. I.e., a total of 50 patches.
+
+"3.Long_Island_MLL_pop_patch_x_y_Feb_2025.csv" contains all MLL information for all 10 populations found across Long Island and NYC, NY and their within-population sampling patches.
