@@ -1,0 +1,7 @@
+This folder contains all data and analysis results for 
+
+"1.LI_INEST_Results" contains all data and results for analyses run through the program INEST. These include analyses for the impacts of null alleles, estimates of inbreeding coefficients, and expected heterozygosity corrected for null alleles.
+
+"2.Program_Files" contains all information and the files needed to run an INEST analysis. 
+
+CITE: Chybicki IJ, Burczyk J. Simultaneous estimation of null alleles and inbreeding coefficients. J Hered. 2009 Jan-Feb;100(1):106-13. doi: 10.1093/jhered/esn088. Epub 2008 Oct 20. PMID: 18936113.
