@@ -1,0 +1,9 @@
+Model:       	nb
+Avg(logl(X)):	-3872.284
+Var(logl(X)):	66.277
+logl(Avg(X)):	-3821.208
+DBar:        	7744.567
+Dhat:        	7642.415
+pD:          	102.152
+DIC:        	7846.719
+

@@ -1,0 +1,9 @@
+Model:       	fb
+Avg(logl(X)):	-2768.961
+Var(logl(X)):	84.919
+logl(Avg(X)):	-2712.077
+DBar:        	5537.921
+Dhat:        	5424.155
+pD:          	113.767
+DIC:        	5651.688
+

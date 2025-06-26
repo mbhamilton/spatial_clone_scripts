@@ -1,0 +1,50 @@
+New data loaded into INEST:
+---------------------------
+Data directory:	F:\Alt\INEST_2\LI_pops\
+Data file name:	10_CB_CupsogueBeach_Genotypes.txt
+# individuals :	87
+# marker loci :	12
+Coordinates available:	False
+
+Locus  	NGen	Miss	NAll	Hobs	Hexp	Fis
+Gene_1 	87	0.000	12	0.621	0.722	0.140
+Gene_6 	87	0.000	13	0.448	0.468	0.042
+Gene_7 	87	0.000	18	0.874	0.897	0.026
+Gene_11	86	0.011	23	0.988	0.921	-0.073
+Gene_AE	87	0.000	6	0.586	0.525	-0.117
+Gene_AM	87	0.000	9	0.678	0.718	0.055
+Gene_R 	87	0.000	9	0.598	0.669	0.107
+Gene_AC	87	0.000	6	0.241	0.260	0.071
+Gene_44	87	0.000	5	0.770	0.658	-0.170
+Gene_49	87	0.000	9	0.552	0.659	0.163
+Gene_50	87	0.000	9	0.552	0.624	0.115
+Gene_55	87	0.000	13	0.483	0.772	0.375
+-
+NGen - number of genotyped individuals
+Miss - observed proportion of missing genotypes
+NAll - number of observed alleles (excluding zeros)
+Hobs - observed proportion of heterozygotes
+Hexp - expected proportion of heterozygotes
+Fis  - inbreeding coefficient (Fis = 1 - Hobs / Hexp)
+
+Results of the permutation test for HW (based on heterozygosity excess, Fis = 1 - Ho/He)
+----------------------------------------------------------------------------------------
+Marker	Fobs	Fperm[0.025]	Fperm[0.975]	Fperm[0.025*]	Fperm[0.975*]
+Gene_1	0.1400	-0.1165	0.1240	-0.1646	0.1720
+Gene_6	0.0417	-0.1067	0.1158	-0.1314	0.1652
+Gene_7	0.0264	-0.0638	0.0780	-0.0896	0.1166
+Gene_11	-0.0727	-0.0597	0.0559	-0.0727	0.0923
+Gene_AE	-0.1167	-0.1608	0.1693	-0.2270	0.2352
+Gene_AM	0.0550	-0.1062	0.1194	-0.1546	0.1677
+Gene_R	0.1069	-0.1179	0.1241	-0.1698	0.1931
+Gene_AC	0.0715	-0.1065	0.1603	-0.1065	0.2491
+Gene_44	-0.1702	-0.1350	0.1458	-0.1878	0.2158
+Gene_49	0.1630	-0.1178	0.1280	-0.1705	0.1805
+Gene_50	0.1153	-0.1073	0.1153	-0.1630	0.1709
+Gene_55	0.3747	-0.1049	0.1053	-0.1349	0.1502
+-
+Fobs - observed Fis
+Fperm[0.025] - 2.5% quantile of the permuted Fis (expected under HW)
+Fperm[0.975] - 97.5% quantile of the permuted Fis (expected under HW)
+Asterisk indicates quantiles after Bonferroni correction for multiple tests
+(based on 100000 permutations)
