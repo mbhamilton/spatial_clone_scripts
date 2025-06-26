@@ -1,0 +1,3 @@
+"1.prob_sexual_genotype" is a script to test for clonality and describe spatial clonal organisation.
+
+"2.Long_Island_Ten_Pops_07_22_2024.txt" contains formatted data for use in the package "RClone" that describes the distribution of genotypes among samples.
