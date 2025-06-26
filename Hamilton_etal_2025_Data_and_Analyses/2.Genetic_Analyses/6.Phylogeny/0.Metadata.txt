@@ -1,0 +1,7 @@
+"1.tree.R" contains all code for generating different MLL-based phylogenies for samples from 10 populations across Long Island and NYC, NY.
+
+"2.BruvodistNJtreesamplenametiplabel.txt" contains intial name-based tree tip labels developed with a Bruvo's genetic distance method.
+
+"3.BruvodistNJtreeclonenumbertiplabel.txt" contains initial tree number-based tip labels developed with a Bruvo's genetic distance method.
+
+"4.LongIslandfull10popsMLLassignments2.csv" contains all MLL assignments for all samples collected for all 10 populations.
