@@ -1,0 +1,9 @@
+"1.MLL_Bubble_Plots" contains data and script to create plots depicting the spatial arrangement of genotypes across patches for 10 populations across Long Island and NYC, NY.
+
+"2.Genodive" contains all analyses produced from the program Genodive created by Patrick Meirmans. These analyses include fixation (Fst, Gst, etc.), metrics of genetic differentiation (Ho...), and observed versus expected numbers of genotypes based on random sampling.
+
+Genodive can be found at "https://www.patrickmeirmans.com/software/Home.html"
+
+CITE: Meirmans, P.G., and P.H. Van Tienderen. 2004. GENOTYPE and GENODIVE: two programs
+for the analysis of genetic diversity of asexual organisms. Molecular Ecology Notes
+4:792-794.
