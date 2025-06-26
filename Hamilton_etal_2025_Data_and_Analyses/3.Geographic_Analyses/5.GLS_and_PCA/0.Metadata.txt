@@ -1,0 +1,9 @@
+"1.LI_linear_models.R" contains code to analyze genetic differentiation as a function of geographic variables such as distance and landscape connectivity.
+
+"2.data_for_linear_models.csv" contains all data used for the linear model analysis in the script above.
+
+"3.datdist" is for the ease plotting distance comparisons against differentiation between sites
+
+"4.datconnect" is for the ease plotting connectivity comparisons against differentiation between sites
+
+"5.datland" is for the ease plotting land area comparisons against differentiation between sites

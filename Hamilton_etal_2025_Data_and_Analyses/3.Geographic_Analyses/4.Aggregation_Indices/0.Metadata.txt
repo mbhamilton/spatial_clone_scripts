@@ -1,0 +1,9 @@
+"1.spatial_metrics_w_null_distribution.R" contains all code for generating spatial metrics for all Long Island populations, null distributions for comparison, and plots used in the manuscript.
+
+"2-11 .csvs" contain all patch data for each Long Island population used in the spatial analyses. 
+
+"12.Long_Island_MLL_pop_patch_x_y_Feb_2025.csv" is a file that facilitates the creation of null distributions for comparisons.
+
+"13.Aggregation_Full_LI_SP2.csv" facilitates plotting.
+
+"14.landscapemetrics.pdf" describes the use of the R landscapemetrics package that was used to generate spatial aggregation comparisons.
