@@ -1,0 +1,29 @@
+"1.connectivity_inter" contains all between population comparisons for cumulative current (landscape connectivity) from Circuitscape runs.
+
+"2.connectivity_inter" contains all within populations, between patch, comparisons for cumulative current (landscape connectivity) from Circuitscape runs.
+
+"3.PercDiff.xlsx" contains all percent difference comparisons for land classes found via connectivity analyses and general land classification areas.
+
+"4.Inter" contains all files necessary to run Circuitscape for between-population comparisons in a server-sided HPC environment. Please contact Charli Minsavage-Davis (charli.mindav@gmail.com) for more information on this analysis!
+
+"5.Inter" contains all files necessary to run Circuitscape for within-population, between-patch, comparisons in a server-sided HPC environment. Please contact Charli Minsavage-Davis (charli.mindav@gmail.com) for more information on this analysis!
+
+You can find the Circuitscape user guide at "https://docs.circuitscape.org/Circuitscape.jl/latest/"
+
+CITE:     Beier, P., W. Spencer, R. Baldwin, and B.H. McRae. 2011. Best science practices for developing regional connectivity maps. Conservation Biology 25(5): 879-892
+
+    Dickson B.G., G.W. Roemer, B.H. McRae, and J.M. Rundall. 2013. Models of regional habitat quality and connectivity for pumas (Puma concolor) in the southwestern United States. PLoS ONE 8(12): e81898. doi:10.1371/journal.pone.0081898
+
+    McRae, B.H. 2006. Isolation by resistance. Evolution 60:1551-1561.
+
+    McRae, B.H. and P. Beier. 2007. Circuit theory predicts Gene flow in plant and animal populations. Proceedings of the National Academy of Sciences of the USA 104:19885-19890.
+
+    McRae, B.H., B.G. Dickson, T.H. Keitt, and V.B. Shah. 2008. Using circuit theory to model connectivity in ecology and conservation. Ecology 10: 2712-2724.
+
+    Shah, V.B. 2007. An Interactive System for Combinatorial Scientific Computing with an Emphasis on Programmer Productivity. PhD thesis, University of California, Santa Barbara.
+
+    Shah,V.B. and B.H. McRae. 2008. Circuitscape: a tool for landscape ecology. In: G. Varoquaux, T. Vaught, J. Millman (Eds.). Proceedings of the 7th Python in Science Conference (SciPy 2008), pp. 62-66.
+
+    Spear, S.F., N. Balkenhol, M.-J. Fortin, B.H. McRae and K. Scribner. 2010. Use of resistance surfaces for landscape genetic studies: Considerations of parameterization and analysis. Molecular Ecology 19(17): 3576-3591.
+
+    Zeller K.A., McGarigal K., and Whiteley A.R. 2012. Estimating landscape resistance to movement: a review. Landscape Ecology 27: 777-797.
