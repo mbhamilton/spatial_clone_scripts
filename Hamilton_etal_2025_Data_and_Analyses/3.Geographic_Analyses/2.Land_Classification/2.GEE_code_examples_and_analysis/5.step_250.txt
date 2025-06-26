@@ -1,0 +1,213 @@
+print('polygon.area(...) =', testbound);
+ 
+// Define the image collection we are working with by writing this command; ee. calls in a specific library such as "Filter"
+var NAIP2 = ee.ImageCollection((NAIP)
+                  .filter(ee.Filter.date('2019-04-01', '2019-09-30'))
+                  .filter(ee.Filter.bounds(testbound))
+                  .mosaic());
+ 
+//here we convert the image collection to a composite
+var NAIP3 = NAIP2.toBands()             
+                   
+print('NAIP3: ', NAIP3) 
+        
+//here we define the bands for an item true color that will be displayed on the workspace map                  
+var trueColor = NAIP3.select(['0_R', '0_G', '0_B']);
+
+//color range for the above object
+var trueColorVis = {
+  bands: ['0_R', '0_G', '0_B'],
+  min: 0.0,
+  max: 255.0,
+};
+
+//adding a layer to the workspace map
+Map.addLayer(trueColor, trueColorVis, 'True Color');
+
+//Map.addLayer(LINYplots, {color: 'yellow'}, 'LINYplots');
+
+//change
+Map.addLayer(trainingset01_200, {color: 'purple'}, 'train50');
+Map.addLayer(testingset01_200, {color: 'purple'}, 'test50');
+
+var altRandom = alt.randomColumn('random', 1, 'normal');
+
+var altsplit = altRandom.reduceColumns(ee.Reducer.percentile([80]), ['random']);  // 80% training, 20% testing.
+
+var altsplitNum = altsplit.get('p80');
+
+var alttrainingset = altRandom.filter(ee.Filter.lte('random', altsplitNum));
+var alttestingset = altRandom.filter(ee.Filter.gt('random', altsplitNum));
+
+print('alttraining: ', alttrainingset);
+print('alttesting: ', alttestingset);
+
+var patRandom = pat.randomColumn('random', 1, 'normal');
+
+var patsplit = patRandom.reduceColumns(ee.Reducer.percentile([80]), ['random']);  
+
+var patsplitNum = patsplit.get('p80');
+
+var pattrainingset = patRandom.filter(ee.Filter.lte('random', patsplitNum));
+var pattestingset = patRandom.filter(ee.Filter.gt('random', patsplitNum));
+
+print('pattraining: ', pattrainingset);
+print('pattesting: ', pattestingset);
+
+var waterRandom = water.randomColumn('random', 1, 'normal');
+
+var watersplit = waterRandom.reduceColumns(ee.Reducer.percentile([80]), ['random']);  
+
+var watersplitNum = watersplit.get('p80');
+
+var watertrainingset = waterRandom.filter(ee.Filter.lte('random', watersplitNum));
+var watertestingset = waterRandom.filter(ee.Filter.gt('random', watersplitNum));
+
+print('watertraining: ', watertrainingset);
+print('watertesting: ', watertestingset);
+
+//var mudgroundRandom = mudground4.randomColumn('random', 1);
+
+//var mudgroundsplit = mudgroundRandom.reduceColumns(ee.Reducer.percentile([80]), ['random']);  
+
+//var mudgroundsplitNum = mudgroundsplit.get('p80');
+
+//var mudgroundtrainingset = mudgroundRandom.filter(ee.Filter.lte('random', mudgroundsplitNum));
+//var mudgroundtestingset = mudgroundRandom.filter(ee.Filter.gt('random', mudgroundsplitNum));
+
+//print('mudgroundtraining: ', mudgroundtrainingset);
+//print('mudgroundtesting: ', mudgroundtestingset);
+
+
+//CHANGE
+var trainingset = alttrainingset.merge(pattrainingset).merge(watertrainingset).merge(trainingset01_200);
+//merge(mudgroundtrainingset).
+print('trainingset: ', trainingset);
+
+//CHANGE
+Export.table.toDrive({
+  collection: trainingset,
+  description:'01trainingset250',
+  fileFormat: 'SHP'
+});
+
+var bands = ['0_R', '0_G', '0_B'];
+
+var training = NAIP3.select(bands).sampleRegions({
+  collection: trainingset,
+  properties: ['landcover'],
+  scale: 1
+});
+
+print('training:',training);
+
+var classifier = ee.Classifier.smileCart().train({
+  features: training,
+  classProperty: 'landcover',
+  inputProperties: bands
+});
+
+var classified = NAIP3.select(bands).classify(classifier);
+
+Map.addLayer(classified, {min:0 , max:2, palette: ['609700', 'd8ff00', '74afff']}, "class");
+ 
+//CHANGE
+var testingset = alttestingset.merge(pattestingset).merge(watertestingset).merge(testingset01_200);
+//merge(mudgroundtestingset).
+print('testingset:', testingset)
+ 
+//CHANGE
+var randomTest = ee.FeatureCollection.randomPoints({region: testbound, points: 30, seed: 4, maxError: 1});
+var randomTest2 = randomset01_200.merge(randomTest)
+    
+var testsetRand = classified.reduceRegions(randomTest2, ee.Reducer.first(), 1);
+print('testsetRand', testsetRand)
+Map.addLayer(testsetRand, null, 'randoms');
+
+var scale = Map.getScale() * 1
+
+var text = require('users/gena/packages:text')
+
+var labels = randomTest.map(function(feat) {
+  feat = ee.Feature(feat)
+  var name = ee.String(feat.get("system:index"))
+  var centroid = feat.geometry().centroid()
+  var t = text.draw(name, centroid, scale, {
+    fontSize:10, 
+    textColor:'red',
+    outlineWidth: 1,
+    outlineColor: 'red'
+  })
+  return t
+})
+
+labels = ee.ImageCollection(labels)
+Map.addLayer(labels)
+
+//CHANGE
+Export.table.toDrive({
+ collection: randomTest2,
+  description:'01randomset250',
+  fileFormat: 'SHP'
+});
+
+//Export.image.toDrive({
+//  image: trueColor,
+//  description: 'ColorImage200',
+//  scale: 5,
+//  region: exportbound
+//});
+
+//CHANGE
+Export.table.toDrive({
+ collection: testingset,
+  description:'01testingset250',
+  fileFormat: 'SHP'
+});
+
+//var randAssign = ee.Array([2, 1, 0, 2, 0, 0, 2, 2, 1, 2, 2, 2, 2, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0]);
+//print('randAssign:', randAssign)
+//var raF = ee.FeatureCollection(randAssign);
+//print('randAssign:', raF)
+
+var testsetF = classified.reduceRegions(testingset, ee.Reducer.first(), 1);
+print('testsetF:', testsetF) //look in the console and you will see that it has added. It should add a property to each the FeatureCollection made from your random point generation at each point.
+ 
+var randsetF = classified.reduceRegions(randomTest2, ee.Reducer.first(), 1);
+print('randsetF:', randsetF)
+
+var lmsetF = testsetF.merge(randsetF);
+//merge(mudgroundtrainingset).
+print('lmsetF: ', lmsetF);
+ 
+//CHANGE 
+Export.table.toDrive({
+  collection: lmsetF,
+  description:'01LMSet250',
+  fileFormat: 'CSV'
+}); 
+
+//Export.image.toDrive({
+//  image: classified,
+//  description: '01Class25',
+//  scale: 1,
+//  region: testbound,
+//  maxPixels: 100000000000
+//});
+
+//Export.image.toDrive({
+//  image: trueColor,
+//  description: '01TC',
+//  scale: 1,
+//  region: testbound,
+//  maxPixels: 100000000000
+//});
+
+
+//Export.image.toDrive({
+//  image: classified,
+//  description: '01Class25x',
+//  scale: 1,
+//  region: exportbound,
+//  maxPixels: 100000000000
+//});

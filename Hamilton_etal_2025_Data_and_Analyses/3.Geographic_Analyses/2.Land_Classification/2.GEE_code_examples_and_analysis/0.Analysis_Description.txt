@@ -1,0 +1,28 @@
+For each of 10 populations on Long Island and in New York City, New York:
+
+	Perform Classification and Regression analysis (supervised machine learning) with an iterative data-building process:	
+
+		Define the data-type to be used (NAIP 2019 data for this study)		
+
+		Select analysis region on map profile in Google Earth Engine
+
+		Manually select 50 representative data points, randomizing them into training (80%) and testing sets (20%)
+
+		Randomly select 50 data points for a secondary "fully" random testing set
+
+		Run classification and regression model
+
+		Export all points and manually assign classes to the testing sets as validation
+
+		Import the 3 training and testing sets into the next script to build datasets and make them directly comparable
+
+		Continue until overtraining is observed, go 1 or 2 sets further
+
+		Run to the maximum number of points used across all populations to homogenize sampling
+
+The 1-6 labeled scripts in this folder represent all of the analysis scripts for 1 of 10 populations for which this analysis was performed. Accuracies for both testing sets for all populations can be found in the upper level folder "2.Land_Classification".
+
+		
+
+
+	

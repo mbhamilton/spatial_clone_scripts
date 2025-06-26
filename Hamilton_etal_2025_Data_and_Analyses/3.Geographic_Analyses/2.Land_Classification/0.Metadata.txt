@@ -1,0 +1,7 @@
+"0.Metadata.txt" is a file describing the contents of all other files for land classification analysis
+
+"1.Accuracy" is a mess, but contains all accuracy information for classification and regression machine learning for all 10 populations used in this study. Overall accuracy (Full), and accuracies for each population can be found in different sheets (1-10).
+
+"2.GEE_code_examples_and_analyses" contains examples for the machine learning code used in Google Earth Engine to produce the classified landscapes and their associated classification accuracies.
+
+"3.Classified_Landscapes" contains all final classified landscapes used in further analyses for this study. Landscapes for 1974 and 2019 can be found in this folder.

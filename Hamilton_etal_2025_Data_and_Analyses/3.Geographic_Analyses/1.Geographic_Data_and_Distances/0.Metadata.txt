@@ -1,0 +1,1 @@
+"1.LI_distance_data.xlsx" contains all geographic data, distance data between pairs of sites (inter sheet), and also all distances between pairs of patches within sites (inra sheet)
