@@ -1,0 +1,11 @@
+"1.Rarefaction.R" is the R script used to generate among and within population rarefaction curves to understand the collection of new genotypes as sampling effort increases
+
+"2a.Rarefaction_all.csv" and "2b.Rarefaction_all.txt" contain data used to produce the among populations rarefaction curve; the "Group" column describes how data is aggregated and the "clone1-clone676" columns describe how many clones of that genet were found among all populations
+
+"3a.Rarefaction_pop.csv" and "3b.Rarefaction_pop.txt" contain data used to produce the within population rarefacton curves; the "Group" column describes how data is aggregated (via populations here) and the "clone1-clone676" columns describe how many clones of that genet were found within each population
+
+"4a.Rarefaction_ind.csv" and "4b.Rarefaction_ind.txt" contain individual level data; not used to make rarefaction curves; the "Group" column describes how data is aggregated (via individuals here) and the "clone1-clone676" columns describe how many clones of that genet were found for each individual (kind of pointless but it pays to be thorough!)
+
+"5a.Rarefaction_patch.csv" and "5b.Rarefaction_patch.txt" contain patch level data; not used to make rarefaction curves due to limited sampling within patches; the "Group" column describes how data is aggregated (via patches here) and the "clone1-clone676" columns describe how many clones of that genet were found within each patch
+
+"6.Rarefaction_ids.csv" contains meta information for each observation; the "Population" column describes the population for each observation, the "Patch" column describes from which patch in that population the sample was collected, and the "Clone" column describes the genet to which the observation belongs

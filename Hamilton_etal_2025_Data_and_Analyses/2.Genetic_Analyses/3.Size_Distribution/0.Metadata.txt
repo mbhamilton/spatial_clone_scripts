@@ -1,0 +1,7 @@
+"1.get_reverse_cumulative_distributions.R" is a script to create reverse cumulative distributions for the number of ramets found for unique MLLs across all 10 populations across Long Island and NYC, NY.
+
+"2.Long_Island_MLL_pop_patch_x_y_Feb_2025.csv" contains all MLL information for all 10 populations found across Long Island and NYC, NY and their within-population sampling patches.
+
+"3.LoglinearModelsForLongIsland_v6.R" compares the created reverse cumulative distributions against random poisson sampling and provides script to create figures.
+
+"4.Long_Island_MLLs.csv" are the output reverse cumualtive distributions from "1.get_reverse_cumulative_distributions.R" that are then used in "3.LoglinearModelsForLongIsland_v6.R"
