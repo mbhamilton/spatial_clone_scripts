@@ -1,0 +1,50 @@
+New data loaded into INEST:
+---------------------------
+Data directory:	F:\Alt\INEST_2\LI_pops\
+Data file name:	8_JB_JonesBeach_Genotypes.txt
+# individuals :	101
+# marker loci :	12
+Coordinates available:	False
+
+Locus  	NGen	Miss	NAll	Hobs	Hexp	Fis
+Gene_1 	101	0.000	15	0.634	0.811	0.219
+Gene_6 	101	0.000	8	0.376	0.408	0.078
+Gene_7 	101	0.000	19	0.950	0.917	-0.037
+Gene_11	101	0.000	22	0.921	0.913	-0.008
+Gene_AE	101	0.000	3	0.406	0.405	-0.001
+Gene_AM	101	0.000	7	0.733	0.660	-0.110
+Gene_R 	101	0.000	8	0.564	0.593	0.048
+Gene_AC	101	0.000	6	0.139	0.133	-0.045
+Gene_44	100	0.010	5	0.450	0.557	0.192
+Gene_49	101	0.000	7	0.614	0.582	-0.054
+Gene_50	101	0.000	8	0.663	0.783	0.153
+Gene_55	101	0.000	15	0.772	0.684	-0.129
+-
+NGen - number of genotyped individuals
+Miss - observed proportion of missing genotypes
+NAll - number of observed alleles (excluding zeros)
+Hobs - observed proportion of heterozygotes
+Hexp - expected proportion of heterozygotes
+Fis  - inbreeding coefficient (Fis = 1 - Hobs / Hexp)
+
+Results of the permutation test for HW (based on heterozygosity excess, Fis = 1 - Ho/He)
+----------------------------------------------------------------------------------------
+Marker	Fobs	Fperm[0.025]	Fperm[0.975]	Fperm[0.025*]	Fperm[0.975*]
+Gene_1	0.2187	-0.0882	0.0961	-0.1250	0.1329
+Gene_6	0.0776	-0.0933	0.1263	-0.1422	0.1751
+Gene_7	-0.0369	-0.0478	0.0607	-0.0695	0.0933
+Gene_11	-0.0080	-0.0516	0.0573	-0.0734	0.0900
+Gene_AE	-0.0012	-0.1732	0.1949	-0.2715	0.2929
+Gene_AM	-0.1099	-0.1250	0.1311	-0.1854	0.1913
+Gene_R	0.0479	-0.1537	0.1486	-0.2209	0.2156
+Gene_AC	-0.0452	-0.0452	0.1797	-0.0452	0.2546
+Gene_44	0.1921	-0.1574	0.1475	-0.2233	0.2203
+Gene_49	-0.0543	-0.1227	0.1165	-0.1741	0.1847
+Gene_50	0.1528	-0.0888	0.1019	-0.1397	0.1528
+Gene_55	-0.1287	-0.0996	0.1039	-0.1433	0.1474
+-
+Fobs - observed Fis
+Fperm[0.025] - 2.5% quantile of the permuted Fis (expected under HW)
+Fperm[0.975] - 97.5% quantile of the permuted Fis (expected under HW)
+Asterisk indicates quantiles after Bonferroni correction for multiple tests
+(based on 100000 permutations)
