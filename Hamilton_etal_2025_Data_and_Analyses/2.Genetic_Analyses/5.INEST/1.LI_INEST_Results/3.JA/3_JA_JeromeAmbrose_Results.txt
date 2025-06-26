@@ -1,0 +1,50 @@
+New data loaded into INEST:
+---------------------------
+Data directory:	F:\Alt\INEST_2\LI_pops\
+Data file name:	3_JA_JeromeAmbrose_genotypes.txt
+# individuals :	94
+# marker loci :	12
+Coordinates available:	False
+
+Locus  	NGen	Miss	NAll	Hobs	Hexp	Fis
+Gene_1 	94	0.000	10	0.766	0.704	-0.089
+Gene_6 	93	0.011	10	0.817	0.753	-0.086
+Gene_7 	94	0.000	15	0.713	0.872	0.182
+Gene_11	94	0.000	16	0.947	0.919	-0.030
+Gene_AE	94	0.000	3	0.096	0.131	0.268
+Gene_AM	94	0.000	6	0.596	0.612	0.026
+Gene_R 	94	0.000	7	0.766	0.717	-0.069
+Gene_AC	94	0.000	5	0.223	0.241	0.072
+Gene_44	94	0.000	5	0.564	0.462	-0.221
+Gene_49	94	0.000	6	0.606	0.711	0.147
+Gene_50	94	0.000	6	0.415	0.636	0.348
+Gene_55	93	0.011	7	0.452	0.568	0.205
+-
+NGen - number of genotyped individuals
+Miss - observed proportion of missing genotypes
+NAll - number of observed alleles (excluding zeros)
+Hobs - observed proportion of heterozygotes
+Hexp - expected proportion of heterozygotes
+Fis  - inbreeding coefficient (Fis = 1 - Hobs / Hexp)
+
+Results of the permutation test for HW (based on heterozygosity excess, Fis = 1 - Ho/He)
+----------------------------------------------------------------------------------------
+Marker	Fobs	Fperm[0.025]	Fperm[0.975]	Fperm[0.025*]	Fperm[0.975*]
+Gene_1	-0.0886	-0.1038	0.1089	-0.1495	0.1696
+Gene_6	-0.0859	-0.1027	0.1008	-0.1454	0.1529
+Gene_7	0.1823	-0.0754	0.0720	-0.1000	0.1210
+Gene_11	-0.0304	-0.0537	0.0627	-0.0770	0.0975
+Gene_AE	0.2684	-0.0587	0.2684	-0.0587	0.3499
+Gene_AM	0.0261	-0.1489	0.1484	-0.2015	0.2182
+Gene_R	-0.0688	-0.0987	0.1102	-0.1435	0.1698
+Gene_AC	0.0724	-0.1053	0.1612	-0.1053	0.2498
+Gene_44	-0.2211	-0.1516	0.1492	-0.1979	0.2416
+Gene_49	0.1472	-0.1087	0.1171	-0.1539	0.1773
+Gene_50	0.3480	-0.1229	0.1297	-0.1735	0.1801
+Gene_55	0.2049	-0.1257	0.1193	-0.1761	0.1859
+-
+Fobs - observed Fis
+Fperm[0.025] - 2.5% quantile of the permuted Fis (expected under HW)
+Fperm[0.975] - 97.5% quantile of the permuted Fis (expected under HW)
+Asterisk indicates quantiles after Bonferroni correction for multiple tests
+(based on 100000 permutations)

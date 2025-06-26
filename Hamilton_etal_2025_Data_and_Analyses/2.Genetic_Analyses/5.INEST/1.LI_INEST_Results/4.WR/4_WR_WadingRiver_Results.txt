@@ -1,0 +1,50 @@
+New data loaded into INEST:
+---------------------------
+Data directory:	F:\Alt\INEST_2\LI_pops\
+Data file name:	4_WR_WadingRiver_Genotypes.txt
+# individuals :	73
+# marker loci :	12
+Coordinates available:	False
+
+Locus  	NGen	Miss	NAll	Hobs	Hexp	Fis
+Gene_1 	73	0.000	9	0.808	0.803	-0.006
+Gene_6 	73	0.000	12	0.890	0.834	-0.067
+Gene_7 	73	0.000	11	0.849	0.869	0.023
+Gene_11	73	0.000	20	0.904	0.906	0.002
+Gene_AE	73	0.000	3	0.233	0.270	0.136
+Gene_AM	73	0.000	7	0.630	0.673	0.064
+Gene_R 	73	0.000	8	0.589	0.613	0.039
+Gene_AC	73	0.000	6	0.137	0.132	-0.037
+Gene_44	72	0.014	6	0.653	0.688	0.052
+Gene_49	72	0.014	6	0.750	0.768	0.023
+Gene_50	72	0.014	8	0.750	0.709	-0.058
+Gene_55	72	0.014	6	0.431	0.494	0.128
+-
+NGen - number of genotyped individuals
+Miss - observed proportion of missing genotypes
+NAll - number of observed alleles (excluding zeros)
+Hobs - observed proportion of heterozygotes
+Hexp - expected proportion of heterozygotes
+Fis  - inbreeding coefficient (Fis = 1 - Hobs / Hexp)
+
+Results of the permutation test for HW (based on heterozygosity excess, Fis = 1 - Ho/He)
+----------------------------------------------------------------------------------------
+Marker	Fobs	Fperm[0.025]	Fperm[0.975]	Fperm[0.025*]	Fperm[0.975*]
+Gene_1	-0.0064	-0.1095	0.1137	-0.1439	0.1652
+Gene_6	-0.0673	-0.0838	0.0979	-0.1169	0.1474
+Gene_7	0.0229	-0.0883	0.0863	-0.1042	0.1339
+Gene_11	0.0022	-0.0587	0.0783	-0.0892	0.1087
+Gene_AE	0.1362	-0.1711	0.2384	-0.1711	0.3404
+Gene_AM	0.0639	-0.1412	0.1458	-0.2029	0.2276
+Gene_R	0.0387	-0.1191	0.1286	-0.1642	0.1736
+Gene_AC	-0.0375	-0.0375	0.1712	-0.0375	0.2753
+Gene_44	0.0519	-0.1472	0.1330	-0.1959	0.2050
+Gene_49	0.0229	-0.1230	0.1262	-0.1777	0.1867
+Gene_50	-0.0579	-0.1369	0.1316	-0.1962	0.1982
+Gene_55	0.1281	-0.1718	0.1564	-0.2407	0.2412
+-
+Fobs - observed Fis
+Fperm[0.025] - 2.5% quantile of the permuted Fis (expected under HW)
+Fperm[0.975] - 97.5% quantile of the permuted Fis (expected under HW)
+Asterisk indicates quantiles after Bonferroni correction for multiple tests
+(based on 100000 permutations)
