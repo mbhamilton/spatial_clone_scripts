@@ -1,0 +1,50 @@
+New data loaded into INEST:
+---------------------------
+Data directory:	F:\Alt\INEST_2\LI_pops\
+Data file name:	5_SA_SammysBeach_Genotypes.txt
+# individuals :	100
+# marker loci :	12
+Coordinates available:	False
+
+Locus  	NGen	Miss	NAll	Hobs	Hexp	Fis
+Gene_1 	100	0.000	12	0.680	0.846	0.196
+Gene_6 	100	0.000	9	0.520	0.728	0.286
+Gene_7 	100	0.000	13	0.690	0.889	0.224
+Gene_11	98	0.020	20	0.724	0.838	0.135
+Gene_AE	100	0.000	12	0.640	0.836	0.234
+Gene_AM	100	0.000	9	0.680	0.792	0.141
+Gene_R 	100	0.000	16	0.640	0.874	0.267
+Gene_AC	100	0.000	17	0.690	0.790	0.126
+Gene_44	100	0.000	3	0.580	0.629	0.078
+Gene_49	100	0.000	3	0.070	0.068	-0.024
+Gene_50	100	0.000	6	0.370	0.544	0.320
+Gene_55	99	0.010	10	0.404	0.792	0.490
+-
+NGen - number of genotyped individuals
+Miss - observed proportion of missing genotypes
+NAll - number of observed alleles (excluding zeros)
+Hobs - observed proportion of heterozygotes
+Hexp - expected proportion of heterozygotes
+Fis  - inbreeding coefficient (Fis = 1 - Hobs / Hexp)
+
+Results of the permutation test for HW (based on heterozygosity excess, Fis = 1 - Ho/He)
+----------------------------------------------------------------------------------------
+Marker	Fobs	Fperm[0.025]	Fperm[0.975]	Fperm[0.025*]	Fperm[0.975*]
+Gene_1	0.1960	-0.0774	0.0773	-0.1131	0.1248
+Gene_6	0.2862	-0.1003	0.1069	-0.1280	0.1483
+Gene_7	0.2240	-0.0587	0.0771	-0.0927	0.1110
+Gene_11	0.1351	-0.0743	0.0739	-0.1099	0.1107
+Gene_AE	0.2345	-0.0782	0.0903	-0.1144	0.1263
+Gene_AM	0.1415	-0.0870	0.0908	-0.1251	0.1415
+Gene_R	0.2674	-0.0663	0.0719	-0.0894	0.1065
+Gene_AC	0.1262	-0.0775	0.0880	-0.1158	0.1262
+Gene_44	0.0784	-0.1453	0.1422	-0.1933	0.2060
+Gene_49	-0.0236	-0.0236	0.2699	-0.0236	0.4164
+Gene_50	0.3202	-0.1604	0.1541	-0.2160	0.2279
+Gene_55	0.4900	-0.0888	0.0929	-0.1270	0.1442
+-
+Fobs - observed Fis
+Fperm[0.025] - 2.5% quantile of the permuted Fis (expected under HW)
+Fperm[0.975] - 97.5% quantile of the permuted Fis (expected under HW)
+Asterisk indicates quantiles after Bonferroni correction for multiple tests
+(based on 100000 permutations)
