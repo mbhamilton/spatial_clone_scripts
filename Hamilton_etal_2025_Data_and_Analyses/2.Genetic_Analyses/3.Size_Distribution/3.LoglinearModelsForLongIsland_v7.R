@@ -7,7 +7,7 @@
 #   Size Distributions                  # 
 #   Authors: Brent A. Johnson           #
 #         & Matthew B. Hamilton         #
-#   Date last edited: 26 June 2025      #
+#   Date last edited: 03 July 2025      #
 #   Manuscript: S. patens landscape     # 
 #   genetics - Long Island & NYC        #
 #                                       #
