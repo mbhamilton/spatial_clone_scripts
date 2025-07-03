@@ -5,7 +5,8 @@
 #   Long Island and NYC, NY Populations #
 #   Distributions for MLL               #
 #   Size Distributions                  # 
-#   Author: Matthew B. Hamilton         #
+#   Authors: Brent A. Johnson           #
+#         & Matthew B. Hamilton         #
 #   Date last edited: 26 June 2025      #
 #   Manuscript: S. patens landscape     # 
 #   genetics - Long Island & NYC        #
@@ -191,15 +192,12 @@ summary(m.reduced.2)
 # plot the results
 
 
-# define plot window size
-dev.new(width = 500, height = 300, unit = "px")
-
 ### Plot of the observed genet counts as a function of the ramet counts, plus a line through the fitted values
-plot(dat2$ramet.count[dat2$pop==1],dat2$obs.genets[dat2$pop==1],type="n", ylim=c(0,70), xlim=c(1,17),
+plot(dat2$ramet.count[dat2$pop==1],dat2$obs.genets[dat2$pop==1],type="n", ylim=c(1,65), xlim=c(1,max(dat2$ramet.count)),
      xlab="Ramets per MLL", ylab="MLL count")
 #, main="Distributions of ramets per genet\nin each population"
 
-axis(1,at=c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17))
+axis(1,at=c(1:max(dat2$ramet.count)))
 
 for (J in 1:10) {
   points(dat2$ramet.count[dat2$pop==J],dat2$obs.genets[dat2$pop==J],pch=J,cex=0.5,col=J)
@@ -207,10 +205,10 @@ for (J in 1:10) {
   lines(dat2$ramet.count[dat2$pop==J],yhat.simple[J,],col=J)
 }
 
-legend("topright", inset=.02, 
+legend("topright", inset=.02,
        legend=c("Pelham Bay (PB)", "Caumsett SP (CS)","Ambro Preserve (JA)","Wading River (WR)",
-                "Sammys Beach (SB)","William T Davis (WT)","Alley Creek (AC)","Jones Beach (JB)", 
-                "Cedar Beach (GI)","Cupsogue Beach (CB)"), 
+                "Sammys Beach (SB)","William T Davis (WT)","Alley Creek (AC)","Jones Beach (JB)",
+                "Cedar Beach (GI)","Cupsogue Beach (CB)"),
        pch = c(1:10), lty= c(1:10), col = c(1:10), cex=0.9, pt.cex = 1
 )
 
@@ -222,10 +220,10 @@ legend("topright", inset=.02,
 ### using ramets per genet with pooled tails
 ### Plot of observed genet counts as a function of the collapsed ramet counts, plus a line through the predicted values
 
-plot(data.collapsed.tails$ramet.count[data.collapsed.tails$pop==1],data.collapsed.tails$obs.genets[data.collapsed.tails$pop==1],type="n", ylim=c(0,70), xlim=c(1,5), xaxt="n",
+plot(data.collapsed.tails$ramet.count[data.collapsed.tails$pop==1],data.collapsed.tails$obs.genets[data.collapsed.tails$pop==1],type="n", ylim=c(0,70), xlim=c(1,max.pooled.ramet.count), xaxt="n",
      xlab="Ramets per MLL with pooled tails for counts ≤2", ylab="MLL count")
 #, main="Distributions of ramets per MLL genet\nin each population with pooled tails"
-axis(1,at=c(1,2,3,4,5))
+axis(1,at=c(1:max.pooled.ramet.count))
 
 for (J in 1:10) {
   points(data.collapsed.tails$ramet.count[data.collapsed.tails$pop==J],data.collapsed.tails$obs.genets[data.collapsed.tails$pop==J],pch=J,cex=0.5,col=J)
